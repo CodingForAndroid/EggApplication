@@ -24,4 +24,10 @@
         android:text="红包 翻转 动画"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <Button
+        android:onClick="upShow"
+        android:text="向上逐渐显示"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 </LinearLayout>

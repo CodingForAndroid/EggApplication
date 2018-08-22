@@ -40,4 +40,8 @@ public class MainActivity extends AppCompatActivity {
     public void packetReverseAnimation(View view){
         startActivity(new Intent(this,ReverseAnimationActivity.class));
     }
+
+    public void upShow(View view){
+        startActivity(new Intent(this,UpShowActivity.class));
+    }
 }

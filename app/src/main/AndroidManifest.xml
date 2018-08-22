@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".EggActivity" />
         <activity android:name=".PacketActivity" />
-        <activity android:name=".ReverseAnimationActivity"></activity>
+        <activity android:name=".ReverseAnimationActivity" />
+        <activity android:name=".UpShowActivity"></activity>
     </application>
 
 </manifest>

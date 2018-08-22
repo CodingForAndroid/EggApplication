@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="bczm.com.eggapplication.PacketActivity">
+
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:background="@mipmap/packet_one_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_centerHorizontal="true"
+        android:id="@+id/ivPacketTop"
+        android:background="@mipmap/packet_one_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:layout_below="@+id/ivPacketTop"
+        android:background="@mipmap/packet_one_bottom"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:visibility="gone"
+        android:layout_below="@+id/ivPacketTop"
+        android:background="@mipmap/packet_one_bg_red"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <FrameLayout
+        android:layout_below="@+id/ivPacketTop"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center" >
+
+        <RelativeLayout
+            android:id="@+id/rlTicket"
+            android:layout_marginTop="-113dp"
+
+            android:background="@mipmap/packet_one_inner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </RelativeLayout>
+    </FrameLayout>
+</RelativeLayout>

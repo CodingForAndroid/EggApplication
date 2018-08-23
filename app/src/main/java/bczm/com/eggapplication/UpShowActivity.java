@@ -6,6 +6,7 @@ import android.animation.Keyframe;
 import android.animation.ObjectAnimator;
 import android.animation.PropertyValuesHolder;
 import android.animation.ValueAnimator;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -24,6 +25,7 @@ public class UpShowActivity extends AppCompatActivity {
     private ImageView ivTiltEgg;
     private ImageView ivEggBottom;
     private ImageView ivPacket;
+    private AnimatorSet animatorSet;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,12 +39,25 @@ public class UpShowActivity extends AppCompatActivity {
         ivPacket = findViewById(R.id.ivPacket);
     }
 
+    /**
+     * 点击新的页面
+     * @param view
+     */
+    public void newActivity(View view){
+        startActivity(new Intent(this,NewActivity.class));
+    }
     @Override
     protected void onResume() {
         super.onResume();
         upShowAnimation();
     }
 
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        animatorSet.cancel();
+    }
 
     public void doAnimation() {
         PropertyValuesHolder alpha1 = PropertyValuesHolder.ofFloat("alpha", 1f, 0f, 1f);
@@ -113,6 +128,8 @@ public class UpShowActivity extends AppCompatActivity {
     }
 
     public void upShowAnimation() {
+        animatorSet = new AnimatorSet();
+
         //蛋从下往上
         PropertyValuesHolder translationY1 = PropertyValuesHolder.ofFloat("translationY", 156f, -156f);
         ////蛋从上往下
@@ -230,7 +247,7 @@ public class UpShowActivity extends AppCompatActivity {
 
             }
         });
-        AnimatorSet animatorSet = new AnimatorSet();
+
         //使用play方法把两个动画拼接起来
         animatorSet.play(objectAnimatorY1).after(objectAnimatorX);
         animatorSet.play(objectAnimatorY2).after(objectAnimatorY1);
@@ -239,7 +256,7 @@ public class UpShowActivity extends AppCompatActivity {
 
 
         //时间
-        animatorSet.setDuration(1000);
+        animatorSet.setDuration(500);
         //开始执行
         animatorSet.start();
 

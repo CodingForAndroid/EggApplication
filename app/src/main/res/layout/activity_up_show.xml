@@ -7,7 +7,11 @@
 
     tools:context="bczm.com.eggapplication.UpShowActivity">
 
-
+    <Button
+        android:text="newActivity"
+        android:onClick="newActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 
 <!--    <ImageView
@@ -45,12 +49,13 @@
     <RelativeLayout
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="30dp"
         android:layout_width="100dp"
-        android:layout_height="109dp">
+        android:layout_height="114dp">
 
             <ImageView
                 android:visibility="gone"
+                android:layout_marginBottom="10dp"
                 android:layout_marginRight="30dp"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentRight="true"
@@ -59,7 +64,7 @@
                 android:layout_height="wrap_content"
                 android:background="@mipmap/egg" />
             <ImageView
-
+                android:visibility="gone"
                 android:id="@+id/ivPacket"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -67,7 +72,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="30dp"
                 android:background="@mipmap/egg_packet"
-                android:visibility="gone" />
+               />
 
 
     </RelativeLayout>

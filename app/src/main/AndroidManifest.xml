@@ -19,7 +19,8 @@
         <activity android:name=".EggActivity" />
         <activity android:name=".PacketActivity" />
         <activity android:name=".ReverseAnimationActivity" />
-        <activity android:name=".UpShowActivity"></activity>
+        <activity android:name=".UpShowActivity" />
+        <activity android:name=".NewActivity"></activity>
     </application>
 
 </manifest>

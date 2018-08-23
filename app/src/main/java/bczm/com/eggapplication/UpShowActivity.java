@@ -203,10 +203,8 @@ public class UpShowActivity extends AppCompatActivity {
 
             }
         });
-//        android:pivotX="50%"
-//        android:pivotY="100%"
-
-        imageView.setPivotX(78);//52  42
+        //52  42
+        imageView.setPivotX(78);
         imageView.setPivotY(126);
         PropertyValuesHolder scaleX1 = PropertyValuesHolder.ofFloat("scaleX",  0f, 1f);
         PropertyValuesHolder scaleY = PropertyValuesHolder.ofFloat("scaleY",  0f, 1f);
@@ -245,27 +243,5 @@ public class UpShowActivity extends AppCompatActivity {
         //开始执行
         animatorSet.start();
 
-
-//        Animation rotateAnimation = AnimationUtils.loadAnimation(this, R.anim.translate_up2);
-//
-//        rotateAnimation.setAnimationListener(new Animation.AnimationListener() {
-//            @Override
-//            public void onAnimationStart(Animation animation) {
-//
-//            }
-//
-//            @Override
-//            public void onAnimationEnd(Animation animation) {
-//
-//            }
-//
-//            @Override
-//            public void onAnimationRepeat(Animation animation) {
-//
-//            }
-//        });
-//        imageView.setVisibility(View.VISIBLE);
-//        imageView.startAnimation(rotateAnimation);
-//        showAndHiddenAnimation(imageView,AnimationState.STATE_SHOW,200);
     }
 }

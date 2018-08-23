@@ -4,28 +4,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="bczm.com.eggapplication.ReverseAnimationActivity">
+    android:gravity="bottom">
 
+
+    <ImageView
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/ivTriangle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/reverse_packet_triangle" />
 
     <RelativeLayout
-        android:id="@+id/rl"
-        android:gravity="center|bottom"
+        android:id="@+id/rlBg"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivTriangle"
+        android:layout_centerHorizontal="true">
 
         <ImageView
-            android:id="@+id/ivTriangle"
-            android:layout_alignParentBottom="true"
-            android:background="@mipmap/reverse_packet_triangle"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/ivBagBG"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:background="@mipmap/reverse_packet_bag_bg" />
 
         <ImageView
+            android:layout_centerHorizontal="true"
+            android:id="@+id/ivBag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/reverse_packet_bag" />
+
+
+        <ImageView
+            android:layout_centerHorizontal="true"
             android:id="@+id/ivCover"
-            android:layout_alignParentBottom="true"
-            android:background="@mipmap/reverse_packet_cover"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:background="@mipmap/reverse_packet_cover" />
+
+
     </RelativeLayout>
+
 
 </RelativeLayout>

@@ -7,37 +7,46 @@
     android:gravity="bottom">
 
 
-    <ImageView
-        android:visibility="gone"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/ivTriangle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@mipmap/reverse_packet_triangle" />
+
 
     <RelativeLayout
         android:id="@+id/rlBg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/ivTriangle"
         android:layout_centerHorizontal="true">
-
         <ImageView
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/ivTriangle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/reverse_packet_triangle" />
+        <ImageView
+            android:layout_below="@+id/ivTriangle"
             android:layout_centerHorizontal="true"
             android:id="@+id/ivBagBG"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@mipmap/reverse_packet_bag_bg" />
+        <ImageView
+            android:layout_below="@+id/ivTriangle"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/ivCoupon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/coupon_single" />
 
         <ImageView
+            android:layout_below="@+id/ivTriangle"
             android:layout_centerHorizontal="true"
             android:id="@+id/ivBag"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@mipmap/reverse_packet_bag" />
 
-
         <ImageView
+            android:layout_below="@+id/ivTriangle"
+
             android:layout_centerHorizontal="true"
             android:id="@+id/ivCover"
             android:layout_width="wrap_content"

@@ -3,6 +3,7 @@ package bczm.com.eggapplication;
 import android.animation.Animator;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
+import android.animation.PropertyValuesHolder;
 import android.animation.ValueAnimator;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -21,6 +22,7 @@ public class ReverseAnimationActivity extends AppCompatActivity {
     private RelativeLayout relativeLayout;
     private ImageView ivCover;
     private ImageView ivTriangle;
+    private ImageView ivCoupon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +35,7 @@ public class ReverseAnimationActivity extends AppCompatActivity {
 
         ivCover = findViewById(R.id.ivCover);
 
+        ivCoupon = findViewById(R.id.ivCoupon);
 
     }
 
@@ -51,7 +54,6 @@ public class ReverseAnimationActivity extends AppCompatActivity {
 
     public void rotate() {
 
-
 //        image.setPivotX(image.getWidth()/2);
 //        image.setPivotY(image.getHeight()/2);//支点在图片中心
 //        ObjectAnimator ra = ObjectAnimator.ofFloat(ivCover,"rotation", 0f, 360f);
@@ -62,6 +64,7 @@ public class ReverseAnimationActivity extends AppCompatActivity {
 //        ObjectAnimator animator1 = ObjectAnimator.ofFloat(ivCover, "rotationX", 0, 180);
         animator1.setDuration(1500);
         ivTriangle.setPivotY(357);
+        //钱包打开背面
         ObjectAnimator animator2 = ObjectAnimator.ofFloat(ivTriangle, "scaleY", 0f, 1f);
         animator2.setDuration(1500);
         animator2.addListener(new Animator.AnimatorListener() {
@@ -118,10 +121,16 @@ public class ReverseAnimationActivity extends AppCompatActivity {
 
             }
         });
+
+        //蛋从下往上
+        PropertyValuesHolder translationY1 = PropertyValuesHolder.ofFloat("translationY", 0f, -220f);
+        ObjectAnimator animatorTranslationY1 = ObjectAnimator.ofPropertyValuesHolder(ivCoupon, translationY1);
+        animatorTranslationY1.setDuration(1500);
 //        animator1.setDuration(6000).start();
         AnimatorSet animatorSet = new AnimatorSet();
         animatorSet.setInterpolator(new LinearInterpolator());
         animatorSet.play(animator2).after(animator1);
+        animatorSet.play(animatorTranslationY1).with(animator2);
 //         animatorSet.play().after(100);
 //        animatorSet.setDuration(1000);
         //开始执行

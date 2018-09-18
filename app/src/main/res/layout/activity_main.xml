@@ -30,4 +30,10 @@
         android:text="向上逐渐显示"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <Button
+        android:onClick="slideShow"
+        android:text="斜着的蛋"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 </LinearLayout>

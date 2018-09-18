@@ -23,42 +23,42 @@ public class PacketActivity extends AppCompatActivity {
         rlTicket = findViewById(R.id.rlTicket);
     }
 
-    private Handler handler = new Handler() {
-        @Override
-        public void handleMessage(android.os.Message msg) {
-            switch (msg.what) {
-                case 1:
-                    startAnimation();
-                    break;
-
-                default:
-                    break;
-            }
-
-        };
-    };
-    /**
-     * 测试用的,开启子线程
-     */
-    private void newThread() {
-        new Thread(new Runnable() {
-
-            @Override
-            public void run() {
-                try {
-                    Thread.sleep(1500);
-                } catch (InterruptedException e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
-                }
-
-                Message msg = new Message();
-                msg.what = 1;
-                handler.sendMessage(msg);
-
-            }
-        }).start();
-    }
+//    private Handler handler = new Handler() {
+//        @Override
+//        public void handleMessage(android.os.Message msg) {
+//            switch (msg.what) {
+//                case 1:
+//                    startAnimation();
+//                    break;
+//
+//                default:
+//                    break;
+//            }
+//
+//        };
+//    };
+//    /**
+//     * 测试用的,开启子线程
+//     */
+//    private void newThread() {
+//        new Thread(new Runnable() {
+//
+//            @Override
+//            public void run() {
+//                try {
+//                    Thread.sleep(1500);
+//                } catch (InterruptedException e) {
+//                    // TODO Auto-generated catch block
+//                    e.printStackTrace();
+//                }
+//
+//                Message msg = new Message();
+//                msg.what = 1;
+//                handler.sendMessage(msg);
+//
+//            }
+//        }).start();
+//    }
     @Override
     protected void onResume() {
         super.onResume();

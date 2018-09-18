@@ -127,6 +127,7 @@ public class ReverseAnimationActivity extends AppCompatActivity {
         ObjectAnimator animatorTranslationY1 = ObjectAnimator.ofPropertyValuesHolder(ivCoupon, translationY1);
         animatorTranslationY1.setDuration(1500);
 //        animator1.setDuration(6000).start();
+
         AnimatorSet animatorSet = new AnimatorSet();
         animatorSet.setInterpolator(new LinearInterpolator());
         animatorSet.play(animator2).after(animator1);

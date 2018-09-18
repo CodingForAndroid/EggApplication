@@ -44,4 +44,8 @@ public class MainActivity extends AppCompatActivity {
     public void upShow(View view){
         startActivity(new Intent(this,UpShowActivity.class));
     }
+
+    public void slideShow(View view){
+        startActivity(new Intent(this,SlideEggActivity.class));
+    }
 }
